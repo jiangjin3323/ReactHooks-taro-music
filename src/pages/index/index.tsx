@@ -24,8 +24,8 @@ const App: React.FC = () => {
     productList: ['中式推拿', '飘飘欲仙', '清泉流水'],
   }]);
 
-  const handleOpenPopup = () => {
-
+  const handleOpenPopup = (value:string) => {
+      console.log(value);
   };
   const handleOrderRecord = () => {
 
@@ -49,7 +49,7 @@ const App: React.FC = () => {
     <View className="content">
       <View className="index-container">
         <View className="right-btn-box">
-          <View className="rule-btn sub-btn" onClick={handleOpenPopup}>活动规则</View>
+          <View className="rule-btn sub-btn" onClick={()=> handleOpenPopup('测试')}>活动规则</View>
           <View className="record-btn sub-btn" onClick={handleOrderRecord}>购买记录</View>
           <View className="make-btn sub-btn" onClick={handleOrderMake}>关注预约</View>
         </View >
