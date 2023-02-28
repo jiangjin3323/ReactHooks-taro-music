@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useLoad } from '@tarojs/taro'
 import { Icon } from '@nutui/nutui-react-taro';
 import { Image, View, Text } from "@tarojs/components";
 import './index.scss';
 const App: React.FC = () => {
+  useLoad(() => {
+    console.log('onLoad')
+  })
   return (
     <View className="wrap">
       <View className="wrap-header">
