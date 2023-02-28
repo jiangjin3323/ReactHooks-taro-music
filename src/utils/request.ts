@@ -4,7 +4,8 @@ import request from '../common/request/request';
 // 全局配置
 request.setConfig({
 	// 'http://relaxed.cn.vc:9903/' , 'http://8.142.81.224:8081/', 'https://rapi.relaverse.cn/'
-	baseUrl: process.env.NODE_ENV === 'development' ? 'http://relaxed.cn.vc:9903/' : 'https://rapi.relaverse.cn/',
+	// baseUrl: process.env.NODE_ENV === 'development' ? 'http://relaxed.cn.vc:9903/' : 'https://rapi.relaverse.cn/',
+	baseUrl:'http://172.17.10.5:3000',
 	dataType: 'json', // 可删除，默认为json 
 	responseType: 'text', // 可删除，默认为text
 	// 设置请求头，支持所有请求头设置，也可不设置，去掉header就行
@@ -18,10 +19,10 @@ request.setConfig({
 request.interceptors.request((config: any) => {
 	// 配置参数和全局配置相同，此优先级最高，会覆盖在其他地方的相同配置参数
 	// 追加请求头，推荐
-	// config.header['content-type'] = 'application/json';
+	config.header['content-type'] = 'application/json; charset=utf-8';
 	// config.header.Authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjciLCJpc3MiOiI3In0.KCNYCm7LbPyn8v4NNigM8Xnjz9TExM4RKcnnhDDUrig';
 	// config.header.Authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEzIiwiaXNzIjoiMTMifQ.LvOKoOqZVF2n12IpRbLbyTSCPrOqeZgbGh-EA5frLkc';
-	config.header.Authorization = '';
+	// config.header.Authorization = '';
 	// 覆盖请求头
 	// config.header = {
 	// 'content-type': 'application/json',

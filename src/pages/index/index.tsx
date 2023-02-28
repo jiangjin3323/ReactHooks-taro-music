@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { useLoad } from '@tarojs/taro'
 import { Icon } from '@nutui/nutui-react-taro';
 import { Image, View, Text } from "@tarojs/components";
+import {getRecommendedPlaylistApi} from '../../api/api'
 import './index.scss';
 const App: React.FC = () => {
   useLoad(() => {
     console.log('onLoad')
+    getRecommendedPlaylistFunc();
   })
+  const getRecommendedPlaylistFunc = async () => {
+    const [err,res] = await getRecommendedPlaylistApi();
+    console.log(res)
+  }
   return (
     <View className="wrap">
       <View className="wrap-header">
