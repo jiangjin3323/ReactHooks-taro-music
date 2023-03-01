@@ -1,11 +1,12 @@
 import http from "../utils/request";
 
 
-/************ 社区 start ***************/
+/************ 首页 start ***************/
 
-//首页bannar
+//推荐歌单
 export const getRecommendedPlaylistApi = (data:any = {}) => http.get(`/personalized`, { data });
+//推荐音乐
+export const getRecommendedMusicListApi = (data:any = {}) => http.get(`/personalized/newsong`, { data });
 
-
-/************ 社区 end ***************/
+/************ 首页 end ***************/
 

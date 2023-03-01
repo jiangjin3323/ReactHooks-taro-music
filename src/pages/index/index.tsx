@@ -2,16 +2,52 @@ import React, { useState } from "react";
 import { useLoad } from '@tarojs/taro'
 import { Icon } from '@nutui/nutui-react-taro';
 import { Image, View, Text } from "@tarojs/components";
-import {getRecommendedPlaylistApi} from '../../api/api'
+import { getRecommendedPlaylistApi, getRecommendedMusicListApi } from '../../api/api'
 import './index.scss';
 const App: React.FC = () => {
+
+  type recommendedPlaylistType = {
+    name: string,
+    picUrl: string,
+    playCount: number,
+    id: number,
+  }
+  //state
+  let [recommendedPlaylist, setRecommendedPlaylist]: [recommendedPlaylist: recommendedPlaylistType[], setRecommendedPlaylist: any] = useState([
+    {
+      name: '',
+      picUrl: '',
+      playCount: 0,
+      id: 0,
+    }
+  ])
+
+  let [recommendedMusicList, setRecommendedMusicList] = useState<any[]>([]);
+
   useLoad(() => {
     console.log('onLoad')
     getRecommendedPlaylistFunc();
+    getRecommendedMusicFunc();
   })
   const getRecommendedPlaylistFunc = async () => {
-    const [err,res] = await getRecommendedPlaylistApi();
-    console.log(res)
+    const [err, res] = await getRecommendedPlaylistApi({
+      limit: 6
+    });
+    if (err !== null) {
+      console.log(err.message);
+      return;
+    }
+    setRecommendedPlaylist(res.data.result);
+  }
+  const getRecommendedMusicFunc = async () => {
+    const [err, res] = await getRecommendedMusicListApi({
+      limit: 10
+    });
+    if (err !== null) {
+      console.log(err.message);
+      return;
+    }
+    setRecommendedMusicList(res.data.result);
   }
   return (
     <View className="wrap">
@@ -42,20 +78,26 @@ const App: React.FC = () => {
           </View>
         </View>
         <View className="wrap-content-body">
-          <View className="wrap-content-body-item">
-            <View className="wcbi-body">
-              <Image className="wcbi-body-img" src="http://p1.music.126.net/hLv4YJOiLTE16LlRpdxZgQ==/109951164152314267.jpg?imageView=1&type=webp&thumbnail=246x0" />
-              <View className="wcbi-body-text">
-                <Icon name="service" size={12}></Icon>
-                <Text className="wcbi-body-text-num">
-                  4032万
-                </Text>
-              </View>
-              <View className="wcbi-body-bottom">
-                用音乐保持你每天的嘴角上扬
-              </View>
-            </View>
-          </View>
+          {
+            recommendedPlaylist.map((item) => {
+              return (
+                <View className="wrap-content-body-item" key={item.id}>
+                  <View className="wcbi-body">
+                    <Image className="wcbi-body-img" src={item.picUrl} />
+                    <View className="wcbi-body-text">
+                      <Icon name="service" size={12}></Icon>
+                      <Text className="wcbi-body-text-num">
+                        {parseInt(String(item.playCount / 10000))}万
+                      </Text>
+                    </View>
+                    <View className="wcbi-body-bottom">
+                      {item.name}
+                    </View>
+                  </View>
+                </View>
+              )
+            })
+          }
         </View>
         <View className="wrap-content-top">
           <View className="wrap-content-top-title">
@@ -66,17 +108,26 @@ const App: React.FC = () => {
           </View>
         </View>
         <View className="wrap-content-music">
-          <View className="wrap-content-music-item">
-            <View className="wcmi-left">
-              <View className="wcmi-left-name">今生今世</View>
-              <View className="wcmi-left-singer">
-                炎明熹-今生今世
-              </View>
-            </View>
-            <View className="wcmi-right">
-              <Icon name="play-start" size={28} color={'RGBA(102, 102, 102, 1)'}></Icon>
-            </View>
-          </View>
+          {
+            recommendedMusicList.map((item) => {
+              return (
+                <View className="wrap-content-music-item" key={item.id}>
+                  <View className="wcmi-left">
+                    <View className="wcmi-left-name">{item.name}</View>
+                    <View className="wcmi-left-singer">
+                      <Text className="wcmi-left-singer-tag">
+                        SQ
+                      </Text>
+                      {item.song.artists.length >= 2 && item.song.artists ? (item.song.artists[0].name + ' / ' + item.song.artists[1].name) : (item.song.artists[0].name)}
+                    </View>
+                  </View>
+                  <View className="wcmi-right">
+                    <Icon name="play-start" size={28} color={'RGBA(102, 102, 102, 1)'}></Icon>
+                  </View>
+                </View>
+              )
+            })
+          }
         </View>
       </View>
     </View>

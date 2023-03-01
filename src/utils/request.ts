@@ -19,7 +19,7 @@ request.setConfig({
 request.interceptors.request((config: any) => {
 	// 配置参数和全局配置相同，此优先级最高，会覆盖在其他地方的相同配置参数
 	// 追加请求头，推荐
-	config.header['content-type'] = 'application/json; charset=utf-8';
+	config.header['content-type'] = 'application/json;';
 	// config.header.Authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjciLCJpc3MiOiI3In0.KCNYCm7LbPyn8v4NNigM8Xnjz9TExM4RKcnnhDDUrig';
 	// config.header.Authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEzIiwiaXNzIjoiMTMifQ.LvOKoOqZVF2n12IpRbLbyTSCPrOqeZgbGh-EA5frLkc';
 	// config.header.Authorization = '';
