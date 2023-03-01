@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useLoad } from '@tarojs/taro'
 import { Icon } from '@nutui/nutui-react-taro';
 import { Image, View, Text } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 import { getRecommendedPlaylistApi, getRecommendedMusicListApi } from '../../api/api'
+import Music from "../../common/music/music";
 import './index.scss';
 const App: React.FC = () => {
 
@@ -49,6 +51,11 @@ const App: React.FC = () => {
     }
     setRecommendedMusicList(res.data.result);
   }
+  const toList = (id:number)=>{
+    Taro.navigateTo({
+      url:'/pages/song/list?id=' + id,
+    })
+  }
   return (
     <View className="wrap">
       <View className="wrap-header">
@@ -81,7 +88,7 @@ const App: React.FC = () => {
           {
             recommendedPlaylist.map((item) => {
               return (
-                <View className="wrap-content-body-item" key={item.id}>
+                <View className="wrap-content-body-item" key={item.id} onClick={()=>toList(item.id)}>
                   <View className="wcbi-body">
                     <Image className="wcbi-body-img" src={item.picUrl} />
                     <View className="wcbi-body-text">
@@ -108,26 +115,7 @@ const App: React.FC = () => {
           </View>
         </View>
         <View className="wrap-content-music">
-          {
-            recommendedMusicList.map((item) => {
-              return (
-                <View className="wrap-content-music-item" key={item.id}>
-                  <View className="wcmi-left">
-                    <View className="wcmi-left-name">{item.name}</View>
-                    <View className="wcmi-left-singer">
-                      <Text className="wcmi-left-singer-tag">
-                        SQ
-                      </Text>
-                      {item.song.artists.length >= 2 && item.song.artists ? (item.song.artists[0].name + ' / ' + item.song.artists[1].name) : (item.song.artists[0].name)}
-                    </View>
-                  </View>
-                  <View className="wcmi-right">
-                    <Icon name="play-start" size={28} color={'RGBA(102, 102, 102, 1)'}></Icon>
-                  </View>
-                </View>
-              )
-            })
-          }
+          <Music dataList={recommendedMusicList}></Music>
         </View>
       </View>
     </View>
