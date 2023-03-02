@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Image, Text } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
 import { Icon } from '@nutui/nutui-react-taro';
-import Music from "../../common/music/music";
+import Music from "../../components/music/music";
 import { getRecommendedPlaylistDetailApi } from '../../api/api';
 // import '../../common/music/music.scss';
 import './list.scss';

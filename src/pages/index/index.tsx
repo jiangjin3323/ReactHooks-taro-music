@@ -4,7 +4,7 @@ import { Icon } from '@nutui/nutui-react-taro';
 import { Image, View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { getRecommendedPlaylistApi, getRecommendedMusicListApi } from '../../api/api'
-import Music from "../../common/music/music";
+import Music from "../../components/music/music";
 import './index.scss';
 const App: React.FC = () => {
 
