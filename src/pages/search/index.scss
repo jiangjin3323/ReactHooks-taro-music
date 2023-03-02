@@ -1,12 +1,14 @@
 .nut-searchbar__content {
     border-radius: 15px !important;
 }
-.nut-searchbar{
+
+.nut-searchbar {
     padding: 15px 10px !important;
 }
+
 .wrap {
     &-recommend {
-        padding: 15px  10px 0;
+        padding: 15px 10px 0;
         border-top: 1px solid rgba(0, 0, 0, .1);
 
         &-title {
@@ -20,6 +22,7 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+
             &-item {
                 padding: 3px 10px;
                 border-radius: 13px;
@@ -28,6 +31,31 @@
                 color: #333;
                 margin: 0 10px 8px 0;
             }
+        }
+    }
+
+    &-suggest {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        &-icon {
+            flex: .1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-text {
+            flex: .9;
+            padding: 10px 0;
+            font-size: 15px;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: normal;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
     }
 }
