@@ -1,15 +1,21 @@
 import React from "react";
 import { Icon } from '@nutui/nutui-react-taro';
 import { View, Text } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 import './music.scss';
 const Music: React.FC<{dataList:any,isNum?:boolean}> = ({ dataList, isNum = false }) => {
+    const toSongIndex = (id:number) =>{
+        Taro.navigateTo({
+            url:'/pages/song/index?id='+id
+        })
+    }
     return (
         <View className="wrap">
             <View className="wrap-content-music">
                 {
                     dataList.map((item: any, index: number) => {
                         return (
-                            <View className="wrap-content-music-body" key={item.id}>
+                            <View className="wrap-content-music-body" hoverClass="wrap-content-music-body-hover" key={item.id} onClick={()=>toSongIndex(item.id)}>
                                 {isNum && <View className="wcmb-num">{index + 1}</View>}
                                 <View className="wrap-content-music-item">
                                     <View className="wcmi-left">

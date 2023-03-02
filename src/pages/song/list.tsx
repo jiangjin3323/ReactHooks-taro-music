@@ -4,12 +4,22 @@ import { useLoad } from "@tarojs/taro";
 import { Icon } from '@nutui/nutui-react-taro';
 import Music from "../../common/music/music";
 import { getRecommendedPlaylistDetailApi } from '../../api/api';
+// import '../../common/music/music.scss';
 import './list.scss';
 import '../index/index.scss';
+type detailType = {
+    name: string, playCount: number, coverImgUrl: string, nickName: string, avatarUrl: string,
+}
 const SongList: React.FC = () => {
     //state
-    let [musicList, setMusicList]:any = useState([]);
-    let [detail,setDetail]:any = useState(null);
+    let [musicList, setMusicList]: any = useState([]);
+    let [detail, setDetail]: [detail: detailType, setDetail: any] = useState({
+        name: '',
+        playCount: 0,
+        coverImgUrl: '',
+        nickName: '',
+        avatarUrl: '',
+    });
     useLoad((e: any) => {
         console.log(e)
         getRecommendedPlaylistDetailFunc(e?.id)
@@ -34,13 +44,13 @@ const SongList: React.FC = () => {
                 }
             }
         })
-        const data:{name:string,playCount:number,coverImgUrl:string,nickName:string} = {
-            name:res.data.playlist.name,
-            playCount:res.data.playlist.playCount,
-            coverImgUrl:res.data.playlist.coverImgUrl,
-            nickName:res.data.playlist.creator.nickname,
+        const data: detailType = {
+            name: res.data.playlist.name,
+            playCount: res.data.playlist.playCount,
+            coverImgUrl: res.data.playlist.coverImgUrl,
+            nickName: res.data.playlist.creator.nickname,
+            avatarUrl: res.data.playlist.creator.avatarUrl,
         };
-        console.log(data);
         setDetail(data);
         setMusicList(list);
     }
@@ -52,7 +62,7 @@ const SongList: React.FC = () => {
                     <View className="wrap-top-left-tag">
                         <Icon name="service" color="#FFFFFF" size={12}></Icon>
                         <Text className="wtlt-num">
-                        {parseInt(String(detail.playCount / 10000))}万
+                            {parseInt(String(detail.playCount / 10000))}万
                         </Text>
                     </View>
                 </View>
@@ -61,7 +71,7 @@ const SongList: React.FC = () => {
                         {detail.name}
                     </View>
                     <View className="wrap-top-right-name">
-                        <Image className="wtrn-img" src="https://p1.music.126.net/JKiCDG-xfj203gcui2z6aA==/109951163139073602.jpg?imageView=1&type=webp&thumbnail=252x0"></Image>
+                        <Image className="wtrn-img" src={detail.avatarUrl}></Image>
                         {detail.nickName}
                     </View>
                 </View>
