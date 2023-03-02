@@ -11,5 +11,7 @@ export const getRecommendedMusicListApi = (data:any = {}) => http.get(`/personal
 export const getRecommendedPlaylistDetailApi = (data:any = {}) => http.get(`/playlist/detail`, { data });
 //获取热门歌单
 export const getHotPlaylistDetailApi = (data:any = {}) => http.get(`/top/playlist`, { data });
+//获取热门搜索
+export const getHotSearchListApi = (data:any = {}) => http.get(`/search/hot`, { data });
 /************ 首页 end ***************/
 

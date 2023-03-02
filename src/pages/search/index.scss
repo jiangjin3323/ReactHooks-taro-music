@@ -1,3 +1,33 @@
-.nut-searchbar__content{
+.nut-searchbar__content {
     border-radius: 15px !important;
+}
+.nut-searchbar{
+    padding: 15px 10px !important;
+}
+.wrap {
+    &-recommend {
+        padding: 15px  10px 0;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+
+        &-title {
+            font-size: 12px;
+            color: #666;
+            line-height: 12px;
+            margin-bottom: 10px;
+        }
+
+        &-body {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            &-item {
+                padding: 3px 10px;
+                border-radius: 13px;
+                border: 1px solid rgba(0, 0, 0, .1);
+                font-size: 14px;
+                color: #333;
+                margin: 0 10px 8px 0;
+            }
+        }
+    }
 }

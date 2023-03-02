@@ -5,7 +5,7 @@ import request from '../common/request/request';
 request.setConfig({
 	// 'http://relaxed.cn.vc:9903/' , 'http://8.142.81.224:8081/', 'https://rapi.relaverse.cn/'
 	// baseUrl: process.env.NODE_ENV === 'development' ? 'http://relaxed.cn.vc:9903/' : 'https://rapi.relaverse.cn/',
-	baseUrl:'http://172.17.10.5:3000',
+	baseUrl:'http://192.168.31.173:3000',
 	dataType: 'json', // 可删除，默认为json 
 	responseType: 'text', // 可删除，默认为text
 	// 设置请求头，支持所有请求头设置，也可不设置，去掉header就行
