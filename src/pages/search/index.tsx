@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "@tarojs/components";
 import TopHeader from "../../components/header/header";
 import { SearchBar } from '@nutui/nutui-react-taro';
+import './index.scss';
 const Search:React.FC = () =>{
     return (
         <View className="wrap">
