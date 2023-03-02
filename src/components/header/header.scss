@@ -1,0 +1,18 @@
+.wrap-header {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #d43c33;
+    height: 84px;
+
+    &-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &-text {
+        margin-left: 5px;
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+}
