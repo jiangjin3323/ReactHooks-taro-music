@@ -5,6 +5,7 @@ import { Image, View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { getRecommendedPlaylistApi, getRecommendedMusicListApi } from '../../api/api'
 import Music from "../../components/music/music";
+import Tabs from "../../components/tabs/tabs";
 import './index.scss';
 const App: React.FC = () => {
 
@@ -64,17 +65,7 @@ const App: React.FC = () => {
           <Text className="wrap-header-text">网易云音乐</Text>
         </View>
       </View>
-      <View className="wrap-tabs">
-        <View className="wrap-tabs-item">
-          <View className="wrap-tabs-item-text wrap-tabs-item-hover">推荐音乐</View>
-        </View>
-        <View className="wrap-tabs-item">
-          <View className="wrap-tabs-item-text">热歌榜</View>
-        </View>
-        <View className="wrap-tabs-item">
-          <View className="wrap-tabs-item-text">搜索</View>
-        </View>
-      </View>
+      <Tabs selcetIndex={0}></Tabs>
       <View className="wrap-content">
         <View className="wrap-content-top">
           <View className="wrap-content-top-title">

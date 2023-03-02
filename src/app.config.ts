@@ -4,6 +4,8 @@ export default defineAppConfig({
     'pages/login/index',
     'pages/song/index',
     'pages/song/list',
+    'pages/hotSong/index',
+    'pages/search/index',
   ],
   window: {
     backgroundTextStyle: 'light',
