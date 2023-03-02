@@ -5,7 +5,6 @@ import { Image, View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { getRecommendedPlaylistApi, getRecommendedMusicListApi } from '../../api/api'
 import Music from "../../components/music/music";
-import Tabs from "../../components/tabs/tabs";
 import TopHeader from '../../components/header/header';
 import './index.scss';
 const App: React.FC = () => {
@@ -63,7 +62,6 @@ const App: React.FC = () => {
       {/* 自定义头部组件 */}
       <TopHeader></TopHeader>
 
-      <Tabs selcetIndex={0}></Tabs>
       <View className="wrap-content">
         <View className="wrap-content-top">
           <View className="wrap-content-top-title">

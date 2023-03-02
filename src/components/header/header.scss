@@ -16,3 +16,34 @@
         color: #FFFFFF;
     }
 }
+.wrap-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    &-item {
+        flex: 0.33;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        font-size: 15px;
+        font-weight: 400;
+
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 0 5px;
+            color: #333333;
+        }
+
+        &-hover {
+            color: #d43c33;
+            border-bottom: 2px solid #d43c33;
+        }
+    }
+}
