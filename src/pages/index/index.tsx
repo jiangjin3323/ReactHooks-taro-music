@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useLoad } from '@tarojs/taro'
+import { useLoad } from '@tarojs/taro';
 import { Icon } from '@nutui/nutui-react-taro';
 import { Image, View, Text } from "@tarojs/components";
 import Taro from "@tarojs/taro";
-import { getRecommendedPlaylistApi, getRecommendedMusicListApi } from '../../api/api'
+import { getRecommendedPlaylistApi, getRecommendedMusicListApi } from '../../api/api';
 import Music from "../../components/music/music";
 import TopHeader from '../../components/header/header';
 import './index.scss';

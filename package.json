@@ -53,6 +53,7 @@
     "@tarojs/runtime": "3.6.0",
     "@tarojs/shared": "3.6.0",
     "@tarojs/taro": "3.6.0",
+    "dayjs": "^1.11.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-refresh": "^0.11.0"

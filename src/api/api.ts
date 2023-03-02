@@ -9,6 +9,7 @@ export const getRecommendedPlaylistApi = (data:any = {}) => http.get(`/personali
 export const getRecommendedMusicListApi = (data:any = {}) => http.get(`/personalized/newsong`, { data });
 //歌单详情
 export const getRecommendedPlaylistDetailApi = (data:any = {}) => http.get(`/playlist/detail`, { data });
-
+//获取热门歌单
+export const getHotPlaylistDetailApi = (data:any = {}) => http.get(`/top/playlist`, { data });
 /************ 首页 end ***************/
 
