@@ -58,5 +58,15 @@ export const throttle = (func:any, wait:number = 500, immediate:boolean = true) 
     }
 }
 
+// 高亮搜索词 result：搜索结果中需要标注的内容 keyWords：搜索输入框中的关键字
+export const useBrightenKeyword = (result, keyword) =>{
+    const Reg = new RegExp(keyword, 'i')
+    let res = '';
+    if (result) {
+      res = result.replace(Reg, `<span style="color: #6BA1FF;">${keyword}</span>`)
+      return res
+    }
+  }
+
 
 

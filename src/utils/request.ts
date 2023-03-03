@@ -38,10 +38,11 @@ request.interceptors.request((config: any) => {
 request.interceptors.response((res: any) => {
 	// 接收请求，执行响应操作
 	// 您的逻辑......
+	return res.data.code === 200 ? res : Promise.reject(res.data)
 	//判断code是不是200 系列
 	// return false;    // 阻止返回,页面不会接收返回值
 	// return {message: '自定义值，来自拦截器'};   // 返回您自定义的值，将覆盖原始返回值
 	// return Promise.reject('error from response interceptors') // 向外层抛出错误，用catch捕获
-	return res; // 原样返回
+	// return res; // 原样返回
 })
 export default request;
