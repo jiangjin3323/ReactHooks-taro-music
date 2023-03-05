@@ -17,5 +17,7 @@ export const getHotSearchListApi = (data:any = {}) => http.get(`/search/hot`, { 
 export const getSearchSuggestListApi = (data:any = {}) => http.get(`/search/suggest`, { data });
 //关键词搜索
 export const getKeywordSearchListApi = (data:any = {}) => http.get(`/search`, { data });
+//关键词多重搜索
+export const getKeywordSearchSuggestListApi = (data:any = {}) => http.get(`/search/suggest`, { data });
 /************ 首页 end ***************/
 
