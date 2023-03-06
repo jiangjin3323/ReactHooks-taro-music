@@ -19,5 +19,7 @@ export const getSearchSuggestListApi = (data:any = {}) => http.get(`/search/sugg
 export const getKeywordSearchListApi = (data:any = {}) => http.get(`/search`, { data });
 //关键词多重搜索
 export const getKeywordSearchSuggestListApi = (data:any = {}) => http.get(`/search/suggest`, { data });
+//获取音乐url
+export const getMusicUrlApi = (data:any = {}) => http.get(`/song/url/v1`, { data });
 /************ 首页 end ***************/
 
