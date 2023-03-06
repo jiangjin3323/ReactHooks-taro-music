@@ -1,8 +1,8 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Taro from "@tarojs/taro";
 import { useLoad } from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
-import { getMusicUrlApi,getMusicDetailApi } from "../../api/api";
+import { getMusicUrlApi, getMusicDetailApi } from "../../api/api";
 import { NavBar, Icon } from '@nutui/nutui-react-taro';
 import './index.scss';
 import leverImg from '../../static/index/song_lever.png';
@@ -16,12 +16,12 @@ const Detail: React.FC = () => {
         getMusicUrlFunc(e.id);
         getMusicDetailFunc(e.id);
     })
-    let [songImg,setSongImg]:[songImg:string,setSongImg:any] = useState('');
-    let [ifPlay,setIfPlay]:[ifPlay:boolean,setIfPlay:any] = useState(true);
+    let [songImg, setSongImg]: [songImg: string, setSongImg: any] = useState('');
+    let [ifPlay, setIfPlay]: [ifPlay: boolean, setIfPlay: any] = useState(true);
     //背景音频
-    const backgroundAudioManager = Taro.getBackgroundAudioManager();
+    const backgroundAudioManager:any = Taro.getBackgroundAudioManager();
     const getMusicUrlFunc = async (id: string) => {
-        const [err, res]:any = await getMusicUrlApi({
+        const [err, res]: any = await getMusicUrlApi({
             id,
             level: 'hires',
         });
@@ -32,7 +32,7 @@ const Detail: React.FC = () => {
         backgroundAudioManager.src = res.data.data[0].url;
     };
     const getMusicDetailFunc = async (id: string) => {
-        const [err, res]:any = await getMusicDetailApi({
+        const [err, res]: any = await getMusicDetailApi({
             ids: id,
         });
         if (err !== null) {
@@ -44,11 +44,13 @@ const Detail: React.FC = () => {
     //暂停或播放
     const pauseAndPlay = () => {
         if (ifPlay) {
-            backgroundAudioManager.pause();
+            console.log('暂停');
             setIfPlay(false);
-        }else {
-            backgroundAudioManager.play();
+            backgroundAudioManager.pause();
+        } else {
+            console.log('播放');
             setIfPlay(true);
+            backgroundAudioManager.play();
         }
     };
     return (
@@ -70,7 +72,7 @@ const Detail: React.FC = () => {
                 </View>
                 <View className="songIndex-bottom-middle">
                     <Image src={leftImg} className="songIndex-bottom-middle-img"></Image>
-                    <Image src={ ifPlay ? (playImg) : (pauseImg)} className="songIndex-bottom-middle-img" onClick={pauseAndPlay}></Image>
+                    <Image src={ifPlay ? (playImg) : (pauseImg)} className="songIndex-bottom-middle-img" onClick={pauseAndPlay}></Image>
                     <Image src={rightImg} className="songIndex-bottom-middle-img"></Image>
                 </View>
                 <View className="songIndex-bottom-right">
