@@ -21,5 +21,7 @@ export const getKeywordSearchListApi = (data:any = {}) => http.get(`/search`, { 
 export const getKeywordSearchSuggestListApi = (data:any = {}) => http.get(`/search/suggest`, { data });
 //获取音乐url
 export const getMusicUrlApi = (data:any = {}) => http.get(`/song/url/v1`, { data });
+//获取音乐详情
+export const getMusicDetailApi = (data:any = {}) => http.get(`/song/detail`, { data });
 /************ 首页 end ***************/
 

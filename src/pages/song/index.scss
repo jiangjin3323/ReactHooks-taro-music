@@ -1,0 +1,119 @@
+.songIndex {
+    position: relative;
+    background-color: #161824;
+    width: 100%;
+    height: 100%;
+
+    &-nav {
+        background-color: #161824;
+        box-shadow: none;
+    }
+
+    &-top {
+        position: absolute;
+        z-index: 1;
+        right: 30%;
+
+        &-img {
+            width: 89px;
+            height: 136px;
+        }
+    }
+
+    &-main {
+        margin-top: 25%;
+
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-bg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: {
+                    repeat: no-repeat;
+                    image: url('../../static/index/bg_song_chassis.png');
+                    size: contain;
+                }
+
+                ;
+                border-radius: 50%;
+                overflow: hidden;
+                width: 288px;
+                height: 288px;
+
+                &-img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            &-bg-hover{
+                animation: rotate 10s linear infinite;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: {
+                    repeat: no-repeat;
+                    image: url('../../static/index/bg_song_chassis.png');
+                    size: contain;
+                }
+                ;
+                border-radius: 50%;
+                overflow: hidden;
+                width: 288px;
+                height: 288px;
+            }
+        }
+    }
+
+    &-bottom {
+        position: fixed;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        &-left {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 20px;
+            &-img{
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        &-middle {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            &-img{
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        &-right {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 20px;
+        }
+    }
+    @keyframes rotate {
+        0%{-webkit-transform:rotate(0deg);}
+        25%{-webkit-transform:rotate(90deg);}
+        50%{-webkit-transform:rotate(180deg);}
+        75%{-webkit-transform:rotate(270deg);}
+        100%{-webkit-transform:rotate(360deg);}
+    }
+}
