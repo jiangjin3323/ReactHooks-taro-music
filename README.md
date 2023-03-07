@@ -25,7 +25,7 @@ npm run dev
 
 接下来启动前端项目
 
-git clone -b dev https://gitee.com/jiangjin3323/react-ts-taro-template.git
+git clone -b dev https://github.com/jiangjin3323/ReactHooks-taro-music.git
 
 cd xxx
 
@@ -48,12 +48,11 @@ npm run dev
 ### 效果图预览
 
 > 下面简要列出几张效果图
-
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/index.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/hotSongList.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/songList.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/search_1.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/search_2.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/search_3.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/songDetail.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/raw/dev/src/static/effect/index.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/raw/dev/src/static/effect/hotSongList.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/raw/dev/src/static/effect/songList.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/raw/dev/src/static/effect/search_1.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/raw/dev/src/static/effect/search_2.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/raw/dev/src/static/effect/search_3.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/raw/dev/src/static/effect/songDetail.png)
 
