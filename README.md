@@ -1,6 +1,6 @@
-## taro-music
+## 基于React-Hooks + Taro 的仿网易云音乐
 
-> 基于`Taro`与网易云音乐 api 开发，技术栈主要是：`TypeScript + React-Hooks + Taro + Nut-Ui`,目前主要是着重H5端的展示，主要也是借此项目强化下上述几个技术栈的使用，打造一个最佳实践项目，通过这个项目也可以帮助你快速使用`Taro`开发一个属于你自己的小程序，此项目会持续更新，欢迎`watch`和`star`～
+> 基于`Taro`与网易云音乐 api 开发，技术栈主要是：`TypeScript + React-Hooks + Taro + Nut-Ui`,目前主要是着重H5端的展示，主要也是借此项目强化下上述几个技术栈的使用，打造一个最佳实践项目，通过这个项目也可以帮助你快速使用`Taro`开发一个属于你自己的项目，欢迎`watch`和`star`～
 
 <hr/>
 
@@ -25,12 +25,11 @@ npm run dev
 
 接下来启动前端项目
 
-git clone 
+git clone -b dev https://gitee.com/jiangjin3323/react-ts-taro-template.git
 
 cd xxx
 
 npm install
-
 
 npm run dev
 
@@ -50,15 +49,4 @@ npm run dev
 
 > 下面简要列出几张效果图
 
-<div align="center">
-  <image width="900" src="https://oscimg.oschina.net/oscnet/f52f4448ce3475f5ecd002958ae1413a3dd.jpg"/>
-</div>
-
-<div align="center">
-  <image width="900" src="https://oscimg.oschina.net/oscnet/446008d8690a962a105f839c46d7638b89b.jpg"/>
-</div>
-
-<div align="center">
-  <image width="900" src="https://oscimg.oschina.net/oscnet/38e5dcac4baaca87195e95a115132cb7958.jpg"/>
-</div>
 
