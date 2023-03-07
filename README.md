@@ -49,11 +49,11 @@ npm run dev
 
 > 下面简要列出几张效果图
 
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/index.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/hotSongList.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/songList.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/search_1.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/search_2.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/search_3.png)
-![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/songDetail.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/index.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/hotSongList.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/songList.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/search_1.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/search_2.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/search_3.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/raw/dev/src/static/effect/songDetail.png)
 
