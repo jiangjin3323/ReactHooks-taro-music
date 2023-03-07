@@ -48,6 +48,7 @@ npm run dev
 ### 效果图预览
 
 > 下面简要列出几张效果图
+
 ![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/index.png)
 ![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/hotSongList.png)
 ![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/songList.png)
