@@ -48,5 +48,11 @@ npm run dev
 ### 效果图预览
 
 > 下面简要列出几张效果图
-![Image text](你刚复制的图片地址)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/index.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/hotSongList.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/songList.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/search_1.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/search_2.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/search_3.png)
+![Image text](https://gitee.com/jiangjin3323/react-ts-taro-template/blob/dev/src/static/effect/songDetail.png)
 
