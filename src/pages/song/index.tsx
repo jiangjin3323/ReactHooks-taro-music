@@ -19,7 +19,7 @@ const Detail: React.FC = () => {
         getMusicDetailFunc(e.id);
     })
     let [songImg, setSongImg]: [songImg: string, setSongImg: any] = useState('');
-    let [ifPlay, setIfPlay]: [ifPlay: boolean, setIfPlay: any] = useState(true);
+    let [ifPlay, setIfPlay]: [ifPlay: boolean, setIfPlay: any] = useState(false);
     const getMusicUrlFunc = async (id: string) => {
         const [err, res]: any = await getMusicUrlApi({
             id,
@@ -30,6 +30,7 @@ const Detail: React.FC = () => {
             return;
         }
         backgroundAudioManager.src = res.data.data[0].url;
+        setIfPlay(true);
     };
     const getMusicDetailFunc = async (id: string) => {
         const [err, res]: any = await getMusicDetailApi({
