@@ -48,11 +48,11 @@ npm run dev
 ### 效果图预览
 
 > 下面简要列出几张效果图
-![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/dev/src/static/effect/index.png)
-![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/dev/src/static/effect/hotSongList.png)
-![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/dev/src/static/effect/songList.png)
-![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/dev/src/static/effect/search_1.png)
-![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/dev/src/static/effect/search_2.png)
-![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/dev/src/static/effect/search_3.png)
-![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/dev/src/static/effect/songDetail.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/main/src/static/effect/index.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/main/src/static/effect/hotSongList.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/main/src/static/effect/songList.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/main/src/static/effect/search_1.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/main/src/static/effect/search_2.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/main/src/static/effect/search_3.png)
+![Image](https://github.com/jiangjin3323/ReactHooks-taro-music/blob/main/src/static/effect/songDetail.png)
 
