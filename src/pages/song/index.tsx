@@ -11,6 +11,8 @@ import playImg from '../../static/index/icon_song_play.png';
 import pauseImg from '../../static/index/icon_song_pause.png';
 import leftImg from '../../static/index/icon_song_left.png';
 import rightImg from '../../static/index/icon_song_right.png';
+//背景音频
+const backgroundAudioManager:any = Taro.getBackgroundAudioManager();
 const Detail: React.FC = () => {
     useLoad((e: any) => {
         getMusicUrlFunc(e.id);
@@ -18,8 +20,6 @@ const Detail: React.FC = () => {
     })
     let [songImg, setSongImg]: [songImg: string, setSongImg: any] = useState('');
     let [ifPlay, setIfPlay]: [ifPlay: boolean, setIfPlay: any] = useState(true);
-    //背景音频
-    const backgroundAudioManager:any = Taro.getBackgroundAudioManager();
     const getMusicUrlFunc = async (id: string) => {
         const [err, res]: any = await getMusicUrlApi({
             id,
