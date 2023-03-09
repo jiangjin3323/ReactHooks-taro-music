@@ -25,7 +25,7 @@ npm run start
 
 接下来启动前端项目
 
-git clone -b dev https://github.com/jiangjin3323/ReactHooks-taro-music.git
+git clone https://github.com/jiangjin3323/ReactHooks-taro-music.git
 
 cd xxx
 
