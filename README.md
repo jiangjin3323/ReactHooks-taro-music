@@ -21,7 +21,7 @@ cd NeteaseCloudMusicApi
 
 npm install
 
-npm run dev
+npm run start
 
 接下来启动前端项目
 
